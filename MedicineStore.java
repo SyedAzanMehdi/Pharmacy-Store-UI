@@ -202,7 +202,7 @@ class MedicalStore extends JFrame {
             }
             JOptionPane.showMessageDialog(this, "Data saved successfully.");
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "❌ Error saving file.");
+            JOptionPane.showMessageDialog(this, "Error saving file.");
         }
     }
 
@@ -217,9 +217,9 @@ class MedicalStore extends JFrame {
                 medicines.add(m);
                 model.addRow(new Object[]{m.getId(), m.getName(), m.getCompany(), m.getPrice(), m.getQuantity(), m.getExpiryDate()});
             }
-            JOptionPane.showMessageDialog(this, "📂 Data loaded successfully.");
+            JOptionPane.showMessageDialog(this, "Data loaded successfully.");
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "❌ Error loading file.");
+            JOptionPane.showMessageDialog(this, "Error loading file.");
         }
 
     }
@@ -282,7 +282,7 @@ class MedicalStore extends JFrame {
                 }
 
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(billDialog, "🔢 Invalid quantity.");
+                JOptionPane.showMessageDialog(billDialog, "Invalid quantity.");
 
             }
 
@@ -344,7 +344,6 @@ class Login {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(230, 245, 255));
 
-        // ✅ Set logo/icon image
         ImageIcon icon = new ImageIcon("phr.png"); // Make sure logo.png is in the project directory
         frame.setIconImage(icon.getImage());
 
@@ -384,7 +383,7 @@ class Login {
             String pass = new String(passField.getPassword());
             if (user.equals("Azan") && pass.equals("4880")) {
                 frame.dispose();
-                new MedicalStore(); // Assuming MedicalStore is another JFrame class
+                new MedicalStore(); 
             } else {
                 JOptionPane.showMessageDialog(frame, "Invalid login!", "Error", JOptionPane.ERROR_MESSAGE);
             }
